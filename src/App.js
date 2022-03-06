@@ -1,64 +1,51 @@
 import React from 'react';
-import ReactDOM  from 'react-dom';
-import { useSelector,useDispatch } from 'react-redux';
+import {useDispatch } from 'react-redux';
 import './App.css';
 
 import * as actionTypes from './store/actions';
 import Circle from './components/Circle';
-import Button from './components/UI/Button';
-import {
-  incrementByOne,
-  decrementByOne,
-  incrementByFive,
-  decrementByFive,
-  reset
-} from './store/actionsIndex';
+// import Button from './components/UI/Button';
+
 
 
 function App() {
   const dispatch=useDispatch();
-  const counter = useSelector((state)=> state.counter);
   return (
     <div className="App">
       <Circle payload/>
       <button 
       className="button"
       type={actionTypes.ADD_ONE}
-      onClick={() => dispatch(incrementByOne())}
-      //onClick={() => dispatch(incrementByOne())}
+      onClick={() => dispatch({type:actionTypes.ADD_ONE})}
       >
         Add One
         </button>
 
         <button 
         className="button"
-      type={actionTypes.ADD_ONE}
-      onClick={() => dispatch(decrementByOne())}
-      //onClick={() => dispatch(incrementByOne())}
+      type={actionTypes.REMOVE_ONE}
+      onClick={() => dispatch({type:actionTypes.REMOVE_ONE})}
       >
         Remove One
         </button>
         <button 
         className="button"
-      type={actionTypes.ADD_ONE}
-      onClick={() => dispatch(incrementByFive())}
-      //onClick={() => dispatch(incrementByOne())}
+      type={actionTypes.ADD_FIVE}
+      onClick={() => dispatch({type:actionTypes.ADD_FIVE})}
       >
         Add Five
         </button>
         <button 
         className="button"
-      type={actionTypes.ADD_ONE}
-      onClick={() => dispatch(decrementByFive())}
-      //onClick={() => dispatch(incrementByOne())}
+      type={actionTypes.REMOVE_FIVE}
+      onClick={() => dispatch({type:actionTypes.REMOVE_FIVE})}
       >
         Remove Five
         </button>
         <button 
         className="button"
-      type={actionTypes.ADD_ONE}
-      onClick={() => dispatch(reset())}
-      //onClick={() => dispatch(incrementByOne())}
+      type={actionTypes.RESET}
+      onClick={() => dispatch({type:actionTypes.RESET})}
       >
         Reset
         </button>

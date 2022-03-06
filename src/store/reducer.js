@@ -11,22 +11,22 @@ const reducer =(state = initialState,action) =>{
                 ...state,
                 counter: state.counter+1,
             };
-        case actionTypes.REMOVE_ONE:
+            case actionTypes.REMOVE_ONE:
             return{
                 ...state,
                 counter: state.counter-1
             };
-        case actionTypes.ADD_FIVE:
+            case actionTypes.ADD_FIVE:
             return{
                 ...state,
                 counter:state.counter+5
             };
-        case actionTypes.REMOVE_FIVE:
+            case actionTypes.REMOVE_FIVE:
             return{
                 ...state,
                 counter:state.counter-5
             };
-        case actionTypes.RESET:
+            case actionTypes.RESET:
             return{
                 ...state,
                 counter:0,
