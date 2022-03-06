@@ -15,7 +15,7 @@ function App() {
       <Circle payload/>
       <button 
       className="button"
-      type={actionTypes.ADD_ONE}
+      type="button"
       onClick={() => dispatch({type:actionTypes.ADD_ONE})}
       >
         Add One
