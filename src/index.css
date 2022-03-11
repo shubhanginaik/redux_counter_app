@@ -1,4 +1,5 @@
 body {
+  background-image:url('../public/background.jpeg');
   margin: 50px;
   display: flex;
   text-align: center;
@@ -25,6 +26,7 @@ margin: 1rem;
 border-radius: 2px;
 min-width: 200px;
 height: 50px;
+border-radius: 5px;
 }
 .button:hover{
   background: rgb(163, 152, 179);
