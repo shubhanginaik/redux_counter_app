@@ -22,16 +22,16 @@ function App() {
         </button>
 
         <button 
-        className="button"
+      className="button"
       type={actionTypes.REMOVE_ONE}
       onClick={() => dispatch({type:actionTypes.REMOVE_ONE})}
       >
         Remove One
         </button>
         <button 
-        className="button"
+      className="button"
       type={actionTypes.ADD_FIVE}
-      onClick={() => dispatch({type:actionTypes.ADD_FIVE})}
+      onClick={() => dispatch({type:actionTypes.ADD_FIVE,payload:5})}
       >
         Add Five
         </button>
