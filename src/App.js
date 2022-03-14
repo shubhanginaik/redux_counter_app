@@ -4,7 +4,7 @@ import './App.css';
 
 import * as actionTypes from './store/actions';
 import Circle from './components/Circle';
-// import Button from './components/UI/Button';
+ import Button from './components/UI/Button';
 
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Circle payload/>
-      <button 
+      {/* <button 
       className="button"
       type="button"
       onClick={() => dispatch({type:actionTypes.ADD_ONE})}
@@ -48,26 +48,31 @@ function App() {
       onClick={() => dispatch({type:actionTypes.RESET})}
       >
         Reset
-        </button>
+        </button> */}
 
-      {/* <Button 
+<Button 
+      onClick={()=>dispatch({type:actionTypes.ADD_ONE})}
+      >
+        Add One
+        </Button>
+      <Button 
       onClick={()=>dispatch({type:actionTypes.REMOVE_ONE})}
       >
         Remove One
         </Button>
         <Button 
-      onClick={()=>dispatch({type:actionTypes.RESET,payload: 0})}
+      onClick={()=>dispatch({type:actionTypes.RESET})}
       >
         Reset
         </Button>
         <Button 
-      onClick={()=>dispatch({type:actionTypes.ADD_FIVE})}>
+      onClick={()=>dispatch({type:actionTypes.ADD_FIVE,payload:5})}>
         ADD_FIVE
         </Button>
         <Button 
       onClick={()=>dispatch({type:actionTypes.REMOVE_FIVE})}>
         Remove Five
-        </Button> */}
+        </Button>
 
     </div>
   );
